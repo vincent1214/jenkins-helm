@@ -16,11 +16,6 @@ podTemplate(containers: [
     stage('单元测试') {
       echo "测试阶段"
     }
-    stage('代码编译打包') {
-      container('maven') {
-        echo "打码编译打包阶段"
-      }
-    }
     stage('构建 Docker 镜像') {
       container('docker') {
         echo "构建 Docker 镜像阶段"
